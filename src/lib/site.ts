@@ -9,7 +9,7 @@ export const siteConfig = {
   locale: "en_US",
   tagline: "Practical digital skills for modern careers.",
   description:
-    "DMrush Institute offers live physical classes in SEO, WordPress, Shopify, AI tools, digital marketing, and AI website building — with online notes, assignments, attendance, and certificates.",
+    "DMrush Institute offers live physical classes in Global SEO, Local SEO, AI website building, AI tools, guest posting, and Shopify — with online notes, assignments, attendance, and certificates.",
 } as const;
 
 export const publicNav = [

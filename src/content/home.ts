@@ -2,7 +2,7 @@ export const homeFaq = [
   {
     question: "Which courses are available?",
     answer:
-      "DMrush Learn currently offers eight programs: Global SEO Mastery, Local SEO Mastery, Shopify & E-Commerce, WordPress Website Development, AI Tools & Prompt Engineering, SaaS-Based AI Tools, Digital Marketing, and AI Website Building.",
+      "DMrush Learn currently offers six programs: Global SEO Mastery, Local SEO Mastery, AI Website Building, AI Tools & Prompt Engineering, Guest Posting & Link Building, and Shopify & E-commerce.",
   },
   {
     question: "Are classes online or physical?",

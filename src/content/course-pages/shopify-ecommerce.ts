@@ -210,7 +210,7 @@ export const shopifyEcommerce: Course = {
     {
       question: "Will we learn Meta Ads and Google Ads in depth?",
       answer:
-        "This course introduces ads fundamentals for store growth. Deeper paid media practice continues in Digital Marketing.",
+        "This course introduces ads fundamentals for store growth. In-depth paid media is not a separate DMrush Learn course in the current catalog.",
     },
     {
       question: "Can freelancers use this to offer store setup services?",

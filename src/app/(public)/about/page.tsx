@@ -39,7 +39,7 @@ export default function AboutPage() {
             </h1>
             <p className="mt-5 max-w-2xl text-base leading-7 text-muted md:text-lg">
               DMrush Learn is the education brand of DMrush — focused on teaching the systems
-              behind search, AI workflows, websites, ecommerce, and digital marketing through live
+              behind search, AI workflows, websites, guest posting, and ecommerce through live
               physical classes.
             </p>
           </div>
