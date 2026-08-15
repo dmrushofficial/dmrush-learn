@@ -1,3 +1,4 @@
+import Image from "next/image";
 import { Badge } from "@/components/ui/Badge";
 import { Button } from "@/components/ui/Button";
 import { Container } from "@/components/ui/Container";
@@ -30,6 +31,25 @@ export function CourseHero({ course }: { course: Course }) {
             <p className="mt-3 max-w-xl text-sm leading-6 text-muted md:text-base md:leading-7">
               {course.valueProposition}
             </p>
+            {course.instructorImage ? (
+              <div className="mt-5 flex items-center gap-3">
+                <div className="relative h-11 w-11 overflow-hidden rounded-full border border-line bg-panel">
+                  <Image
+                    src={course.instructorImage}
+                    alt={course.instructor}
+                    fill
+                    className="object-cover object-top"
+                    sizes="44px"
+                  />
+                </div>
+                <div>
+                  <p className="text-xs font-semibold uppercase tracking-[0.08em] text-muted">
+                    Instructor
+                  </p>
+                  <p className="text-sm font-semibold text-ink">{course.instructor}</p>
+                </div>
+              </div>
+            ) : null}
             <div className="mt-6 flex flex-wrap gap-2">
               {[
                 course.duration,
@@ -48,10 +68,7 @@ export function CourseHero({ course }: { course: Course }) {
             </div>
             <div className="mt-7 flex flex-col gap-3 sm:flex-row">
               <Button href={applyHref} variant="signal" size="lg">
-                Apply Now
-              </Button>
-              <Button href="#curriculum" variant="secondary" size="lg">
-                View Curriculum
+                Contact us
               </Button>
             </div>
           </div>

@@ -43,6 +43,7 @@ export default async function StudentCoursesPage() {
                   {course.category}
                 </p>
                 <h3 className="mt-2 text-xl font-bold text-ink">{course.title}</h3>
+                <p className="mt-1 text-xs font-semibold text-ink">Instructor: {course.instructor}</p>
                 <p className="mt-2 text-sm text-muted">{course.shortDescription}</p>
               </Link>
             ))}

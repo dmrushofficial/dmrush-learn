@@ -15,8 +15,8 @@ export const shopifyEcommerce: Course = {
   level: "Beginner",
   duration: "2 Months",
   classesPerWeek: 3,
-  days: "Monday / Wednesday / Saturday",
-  classTime: "3:00 PM – 4:30 PM",
+  days: "Mon/Wed/Sat",
+  classTime: "3:00–4:30",
   classroom: "Room 1",
   trainingMode: "On-Campus",
   location: "DMRUSH, Pattoki",
@@ -24,8 +24,8 @@ export const shopifyEcommerce: Course = {
   metaTitle: "Shopify & E-Commerce Course | DMRUSH Learn Pattoki",
   metaDescription:
     "2-month Shopify & E-Commerce training at DMRUSH Learn. Store setup, products, themes, conversion, SEO, analytics, and a complete Shopify store project. Mon/Wed/Sat, 3:00–4:30 PM.",
-  instructor: "Instructor to be announced",
-  instructorImage: null,
+  instructor: "Usman Raza",
+  instructorImage: "/images/instructors/usman-raza.png",
   thumbnail: "/images/courses/visuals/shopify-hero.jpg",
   thumbnailTone: "slate",
   visualTheme: "shopify",
@@ -185,7 +185,7 @@ export const shopifyEcommerce: Course = {
       ],
     },
   ],
-  relatedCourseSlugs: ["guest-posting-link-building","global-seo-mastery","ai-tools-prompt-engineering"],
+  relatedCourseSlugs: ["digital-marketing","global-seo-mastery","ai-tools-prompt-engineering"],
   faq: [
     {
       question: "Will every student build a Shopify store?",
@@ -210,7 +210,7 @@ export const shopifyEcommerce: Course = {
     {
       question: "Will we learn Meta Ads and Google Ads in depth?",
       answer:
-        "This course introduces ads fundamentals for store growth. In-depth paid media is not a separate DMrush Learn course in the current catalog.",
+        "This course introduces ads fundamentals for store growth. Deeper paid media practice continues in Digital Marketing.",
     },
     {
       question: "Can freelancers use this to offer store setup services?",

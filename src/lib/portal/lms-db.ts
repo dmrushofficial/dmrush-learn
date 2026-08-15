@@ -25,23 +25,74 @@ function ensureDir() {
   if (!fs.existsSync(DATA_DIR)) fs.mkdirSync(DATA_DIR, { recursive: true });
 }
 
-async function defaultTeachers(): Promise<TeachersDatabase> {
+const NAMED_INSTRUCTORS = [
+  {
+    id: "PT-NAJAF",
+    email: "najaf.khan@dmrush.com",
+    name: "Najaf Khan",
+    roleTitle: "SEO & Digital Marketing Instructor",
+    assignedCourseIds: ["course-global-seo", "course-local-seo", "course-digital-marketing"],
+  },
+  {
+    id: "PT-USMAN",
+    email: "usman.raza@dmrush.com",
+    name: "Usman Raza",
+    roleTitle: "Web & Ecommerce Instructor",
+    assignedCourseIds: ["course-shopify", "course-wordpress", "course-ai-website"],
+  },
+  {
+    id: "PT-TAYYAB",
+    email: "tayyab.hanif@dmrush.com",
+    name: "Tayyab Hanif",
+    roleTitle: "AI Tools Instructor",
+    assignedCourseIds: ["course-ai-tools", "course-saas-ai"],
+  },
+] as const;
+
+function namedInstructorAccounts(now: string, password: string): PortalTeacher[] {
+  return NAMED_INSTRUCTORS.map((person) => ({
+    ...person,
+    assignedCourseIds: [...person.assignedCourseIds],
+    password,
+    isActive: true,
+    createdAt: now,
+    updatedAt: now,
+  }));
+}
+
+function mergeNamedInstructors(db: TeachersDatabase): TeachersDatabase {
   const now = new Date().toISOString();
-  return {
-    teachers: [
-      {
-        id: "PT-001",
-        email: "teacher@dmrush.com",
-        password: await hashPassword("teacher"),
-        name: "DMRUSH Instructor",
-        roleTitle: "Lead Instructor",
-        assignedCourseIds: courses.map((c) => c.id),
-        isActive: true,
-        createdAt: now,
-        updatedAt: now,
-      },
-    ],
-  };
+  const teachers = [...db.teachers];
+  let changed = false;
+  for (const person of namedInstructorAccounts(now, "teacher")) {
+    const idx = teachers.findIndex((t) => t.email.toLowerCase() === person.email);
+    if (idx === -1) {
+      teachers.push(person);
+      changed = true;
+      continue;
+    }
+    const existing = teachers[idx];
+    const next: PortalTeacher = {
+      ...existing,
+      name: person.name,
+      roleTitle: person.roleTitle,
+      assignedCourseIds: person.assignedCourseIds,
+      isActive: true,
+    };
+    if (
+      existing.name !== next.name ||
+      existing.roleTitle !== next.roleTitle ||
+      existing.assignedCourseIds.join() !== next.assignedCourseIds.join() ||
+      existing.isActive !== next.isActive
+    ) {
+      teachers[idx] = next;
+      changed = true;
+    }
+  }
+  if (!changed) return db;
+  const next = { teachers };
+  fs.writeFileSync(TEACHERS_FILE, JSON.stringify(next, null, 2), "utf-8");
+  return next;
 }
 
 function emptyLms(): PortalLmsDatabase {
@@ -111,8 +162,6 @@ function normalizeLms(db: PortalLmsDatabase): PortalLmsDatabase {
 export function readTeachersDb(): TeachersDatabase {
   ensureDir();
   if (!fs.existsSync(TEACHERS_FILE)) {
-    // Sync seed with plaintext then migrate on first login if hash fails here —
-    // write a placeholder; migrateTeachersPasswords called from login.
     const now = new Date().toISOString();
     const seed: TeachersDatabase = {
       teachers: [
@@ -127,12 +176,14 @@ export function readTeachersDb(): TeachersDatabase {
           createdAt: now,
           updatedAt: now,
         },
+        ...namedInstructorAccounts(now, "teacher"),
       ],
     };
     fs.writeFileSync(TEACHERS_FILE, JSON.stringify(seed, null, 2), "utf-8");
     return seed;
   }
-  return JSON.parse(fs.readFileSync(TEACHERS_FILE, "utf-8")) as TeachersDatabase;
+  const db = JSON.parse(fs.readFileSync(TEACHERS_FILE, "utf-8")) as TeachersDatabase;
+  return mergeNamedInstructors(db);
 }
 
 export function writeTeachersDb(db: TeachersDatabase) {
@@ -385,5 +436,3 @@ export async function migrateTeacherPasswordIfNeeded(teacherId: string, plaintex
 }
 
 export type { AttendanceStatus };
-// silence unused defaultTeachers for now
-void defaultTeachers;

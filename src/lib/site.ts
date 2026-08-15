@@ -6,13 +6,18 @@ export const siteConfig = {
   agencyUrl: "https://dmrush.com",
   agencyLabel: "DMrush Agency",
   email: "learn@dmrush.com",
+  phone: "+923017786667",
+  phoneDisplay: "+92 301 7786667",
+  whatsappUrl: "https://wa.me/923017786667",
+  address: "Flat # 101 Burj AlGhori Plaza, Faisal Colony Pattoki",
   locale: "en_US",
   tagline: "Practical digital skills for modern careers.",
   description:
-    "DMrush Institute offers live physical classes in Global SEO, Local SEO, AI website building, AI tools, guest posting, and Shopify — with online notes, assignments, attendance, and certificates.",
+    "DMrush Institute offers live physical classes in SEO, WordPress, Shopify, AI tools, digital marketing, and AI website building — with online notes, assignments, attendance, and certificates.",
 } as const;
 
 export const publicNav = [
+  { label: "Home", href: "/" },
   { label: "Courses", href: "/courses" },
   { label: "Instructors", href: "/instructors" },
   { label: "About", href: "/about" },

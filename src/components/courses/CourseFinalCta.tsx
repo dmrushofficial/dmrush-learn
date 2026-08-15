@@ -12,17 +12,9 @@ export function CourseFinalCta({ course }: { course: Course }) {
         <p className="mt-3 text-sm leading-7 text-on-accent/80 md:text-base">
           Join practical, project-based training at DMRUSH Pattoki.
         </p>
-        <div className="mt-7 flex flex-col items-center justify-center gap-3 sm:flex-row">
+        <div className="mt-7">
           <Button href={`/contact?course=${course.slug}`} variant="signal" size="lg">
-            Apply Now
-          </Button>
-          <Button
-            href="/contact"
-            variant="secondary"
-            size="lg"
-            className="border-white/30 text-on-accent hover:bg-white/10"
-          >
-            Contact Admissions
+            Contact us
           </Button>
         </div>
       </Container>

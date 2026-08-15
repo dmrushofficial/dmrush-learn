@@ -12,6 +12,7 @@ type Module = { id: string; title: string; lessons: Lesson[] };
 export function StudentCourseWorkspace({
   courseId,
   courseTitle,
+  instructorName,
   modules,
   initialCompletedIds,
   initialPercent,
@@ -19,6 +20,7 @@ export function StudentCourseWorkspace({
 }: {
   courseId: string;
   courseTitle: string;
+  instructorName?: string;
   modules: Module[];
   initialCompletedIds: string[];
   initialPercent: number;
@@ -120,8 +122,14 @@ export function StudentCourseWorkspace({
             <h2 className="mt-4 text-2xl font-bold text-ink">{active?.title ?? "Select a lesson"}</h2>
             <div className="mt-5 rounded-xl border border-line bg-cream p-5 text-sm leading-7 text-muted">
               <p>
-                Use this lesson as your class notes checklist for <strong>{courseTitle}</strong>.
-                Mark it complete after you finish the session work.
+                Use this lesson as your class notes checklist for <strong>{courseTitle}</strong>
+                {instructorName ? (
+                  <>
+                    {" "}
+                    with <strong>{instructorName}</strong>
+                  </>
+                ) : null}
+                . Mark it complete after you finish the session work.
               </p>
             </div>
             {active ? (

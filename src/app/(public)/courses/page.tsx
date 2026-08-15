@@ -6,7 +6,7 @@ import { createPageMetadata } from "@/lib/metadata";
 export const metadata = createPageMetadata({
   title: "Courses",
   description:
-    "Browse six DMRUSH Learn courses in Pattoki: Global SEO, Local SEO, AI Website Building, AI Tools & Prompt Engineering, Guest Posting & Link Building, and Shopify & E-commerce — with schedules and project-based curricula.",
+    "Browse eight DMRUSH Learn courses in Pattoki: Global SEO, Local SEO, Shopify, WordPress, AI Tools, SaaS AI, Digital Marketing, and AI Website Building — with schedules and project-based curricula.",
   path: "/courses",
 });
 
@@ -20,7 +20,7 @@ export default function CoursesPage() {
             Practical programs for digital growth skills.
           </h1>
           <p className="mt-5 max-w-2xl text-base leading-7 text-muted md:text-lg">
-            Six current courses at DMRUSH. Live physical classes with detailed curricula, projects,
+            Eight current courses at DMRUSH. Live physical classes with detailed curricula, projects,
             and portfolio-focused training — each with a clear duration, weekly schedule, and class
             time.
           </p>

@@ -42,11 +42,17 @@ export function MobileNav() {
               {siteConfig.agencyLabel}
             </a>
             <div className="mt-2 flex flex-col gap-2">
-              <Button href="/login" variant="secondary">
-                Student Login
-              </Button>
-              <Button href="/courses" variant="signal">
-                Explore Courses
+              <a
+                href={siteConfig.whatsappUrl}
+                target="_blank"
+                rel="noreferrer"
+                className="text-base font-semibold text-ink"
+                onClick={() => setOpen(false)}
+              >
+                WhatsApp {siteConfig.phoneDisplay}
+              </a>
+              <Button href="/contact" variant="signal">
+                Contact us
               </Button>
             </div>
           </nav>

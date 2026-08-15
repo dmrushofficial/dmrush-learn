@@ -40,6 +40,7 @@ export function CourseCard({
           </Link>
         </h3>
         <p className="mt-2 flex-1 text-sm leading-6 text-muted">{course.shortDescription}</p>
+        <p className="mt-3 text-xs font-semibold text-ink">Instructor: {course.instructor}</p>
         <dl className="mt-4 grid grid-cols-2 gap-3 text-xs text-muted">
           <div>
             <dt className="font-semibold text-ink">Duration</dt>

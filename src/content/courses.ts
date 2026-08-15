@@ -1,10 +1,12 @@
 import type { Course } from "@/content/course-types";
 import { globalSeoMastery } from "@/content/course-pages/global-seo-mastery";
 import { localSeoMastery } from "@/content/course-pages/local-seo-mastery";
-import { aiWebsiteBuilding } from "@/content/course-pages/ai-website-building";
-import { aiToolsPromptEngineering } from "@/content/course-pages/ai-tools-prompt-engineering";
-import { guestPostingLinkBuilding } from "@/content/course-pages/guest-posting-link-building";
 import { shopifyEcommerce } from "@/content/course-pages/shopify-ecommerce";
+import { wordpressWebsiteDevelopment } from "@/content/course-pages/wordpress-website-development";
+import { aiToolsPromptEngineering } from "@/content/course-pages/ai-tools-prompt-engineering";
+import { saasBasedAiTools } from "@/content/course-pages/saas-based-ai-tools";
+import { digitalMarketing } from "@/content/course-pages/digital-marketing";
+import { aiWebsiteBuilding } from "@/content/course-pages/ai-website-building";
 
 export type {
   Course,
@@ -22,10 +24,12 @@ export { toolsDisclaimer } from "@/content/course-types";
 export const courses: Course[] = [
   globalSeoMastery,
   localSeoMastery,
-  aiWebsiteBuilding,
-  aiToolsPromptEngineering,
-  guestPostingLinkBuilding,
   shopifyEcommerce,
+  wordpressWebsiteDevelopment,
+  aiToolsPromptEngineering,
+  saasBasedAiTools,
+  digitalMarketing,
+  aiWebsiteBuilding,
 ];
 
 function scheduleLine(course: Pick<Course, "classesPerWeek" | "days" | "classTime">) {
@@ -53,8 +57,10 @@ export function formatCourseSchedule(course: Course): string {
 export const skillStrip = [
   "SEO",
   "Local SEO",
-  "AI Websites",
+  "Shopify",
+  "WordPress",
   "AI Tools",
-  "Guest Posting",
-  "E-commerce",
+  "SaaS AI",
+  "Digital Marketing",
+  "AI Websites",
 ] as const;

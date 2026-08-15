@@ -1,60 +1,47 @@
-export type InstructorPlaceholder = {
+export type Instructor = {
   id: string;
   name: string;
   role: string;
-  courseTaught: string;
+  coursesTaught: string[];
+  courseIds: string[];
   expertise: string;
-  photo: string | null;
+  photo: string;
 };
 
-/** Placeholder cards until real instructors are provided. */
-export const instructors: InstructorPlaceholder[] = [
+export const instructors: Instructor[] = [
   {
-    id: "inst-1",
-    name: "Instructor to be announced",
-    role: "SEO Instructor",
-    courseTaught: "Global SEO Mastery",
-    expertise: "Technical SEO · Content systems",
-    photo: null,
+    id: "inst-najaf",
+    name: "Najaf Khan",
+    role: "SEO & Digital Marketing Instructor",
+    coursesTaught: ["Global SEO Mastery", "Local SEO Mastery", "Digital Marketing"],
+    courseIds: ["course-global-seo", "course-local-seo", "course-digital-marketing"],
+    expertise: "SEO · Local search · Digital marketing",
+    photo: "/images/instructors/najaf-khan.png",
   },
   {
-    id: "inst-2",
-    name: "Instructor to be announced",
-    role: "Local SEO Instructor",
-    courseTaught: "Local SEO Mastery",
-    expertise: "Maps · GBP · Local pages",
-    photo: null,
+    id: "inst-usman",
+    name: "Usman Raza",
+    role: "Web & Ecommerce Instructor",
+    coursesTaught: ["Shopify & E-Commerce", "WordPress Website Development", "AI Website Building"],
+    courseIds: ["course-shopify", "course-wordpress", "course-ai-website"],
+    expertise: "Shopify · WordPress · AI websites",
+    photo: "/images/instructors/usman-raza.png",
   },
   {
-    id: "inst-3",
-    name: "Instructor to be announced",
-    role: "AI & Web Instructor",
-    courseTaught: "AI Website Building",
-    expertise: "AI workflows · Web building",
-    photo: null,
-  },
-  {
-    id: "inst-4",
-    name: "Instructor to be announced",
+    id: "inst-tayyab",
+    name: "Tayyab Hanif",
     role: "AI Tools Instructor",
-    courseTaught: "AI Tools & Prompt Engineering",
-    expertise: "Prompt systems · AI tooling",
-    photo: null,
-  },
-  {
-    id: "inst-5",
-    name: "Instructor to be announced",
-    role: "Link Building Instructor",
-    courseTaught: "Guest Posting & Link Building",
-    expertise: "Outreach · Guest posts · Links",
-    photo: null,
-  },
-  {
-    id: "inst-6",
-    name: "Instructor to be announced",
-    role: "Ecommerce Instructor",
-    courseTaught: "Shopify & E-commerce",
-    expertise: "Shopify · Conversion · Store SEO",
-    photo: null,
+    coursesTaught: ["AI Tools & Prompt Engineering", "SaaS-Based AI Tools"],
+    courseIds: ["course-ai-tools", "course-saas-ai"],
+    expertise: "Prompt systems · SaaS AI · Workflows",
+    photo: "/images/instructors/tayyab-hanif.png",
   },
 ];
+
+export function getInstructorByName(name: string): Instructor | undefined {
+  return instructors.find((person) => person.name === name);
+}
+
+export function getInstructorByCourseId(courseId: string): Instructor | undefined {
+  return instructors.find((person) => person.courseIds.includes(courseId));
+}

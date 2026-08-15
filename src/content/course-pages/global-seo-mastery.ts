@@ -15,8 +15,8 @@ export const globalSeoMastery: Course = {
   level: "Intermediate",
   duration: "3 Months",
   classesPerWeek: 3,
-  days: "Monday / Wednesday / Saturday",
-  classTime: "12:00 PM – 1:30 PM",
+  days: "Mon/Wed/Sat",
+  classTime: "12:00–1:30",
   classroom: "Room 1",
   trainingMode: "On-Campus",
   location: "DMRUSH, Pattoki",
@@ -24,8 +24,8 @@ export const globalSeoMastery: Course = {
   metaTitle: "Global SEO Mastery Course | DMRUSH Learn Pattoki",
   metaDescription:
     "3-month Global SEO Mastery at DMRUSH Learn in Pattoki. Keyword research, technical SEO, content systems, audits, GSC, GA4, and a real-world SEO project. Mon/Wed/Sat, 12:00–1:30 PM.",
-  instructor: "Instructor to be announced",
-  instructorImage: null,
+  instructor: "Najaf Khan",
+  instructorImage: "/images/instructors/najaf-khan.png",
   thumbnail: "/images/courses/visuals/global-seo-hero.jpg",
   thumbnailTone: "forest",
   visualTheme: "global-seo",
@@ -259,7 +259,7 @@ export const globalSeoMastery: Course = {
       ],
     },
   ],
-  relatedCourseSlugs: ["local-seo-mastery","guest-posting-link-building","ai-tools-prompt-engineering"],
+  relatedCourseSlugs: ["local-seo-mastery","digital-marketing","ai-tools-prompt-engineering"],
   faq: [
     {
       question: "Do I need previous SEO experience?",

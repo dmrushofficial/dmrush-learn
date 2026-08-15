@@ -35,6 +35,7 @@ export default async function StudentCoursePage({ params }: Props) {
       <StudentCourseWorkspace
         courseId={course.id}
         courseTitle={course.title}
+        instructorName={course.instructor}
         modules={course.modules}
         initialCompletedIds={progress.completedLessonIds}
         initialPercent={progress.percent}

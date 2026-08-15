@@ -15,8 +15,8 @@ export const localSeoMastery: Course = {
   level: "Beginner",
   duration: "3 Months",
   classesPerWeek: 3,
-  days: "Mon / Wed / Sat",
-  classTime: "1:30–3:00 PM",
+  days: "Mon/Wed/Sat",
+  classTime: "1:30–3:00",
   classroom: "Room 1",
   trainingMode: "On-Campus",
   location: "DMRUSH, Pattoki",
@@ -24,8 +24,8 @@ export const localSeoMastery: Course = {
   metaTitle: "Local SEO Mastery Course | DMRUSH Learn Pattoki",
   metaDescription:
     "3-month Local SEO Mastery at DMRUSH Learn. GBP, Map Pack, citations, reviews, local pages, and a local business project. Mon/Wed/Sat, 1:30–3:00 PM.",
-  instructor: "Instructor to be announced",
-  instructorImage: null,
+  instructor: "Najaf Khan",
+  instructorImage: "/images/instructors/najaf-khan.png",
   thumbnail: "/images/courses/visuals/local-seo-hero.jpg",
   thumbnailTone: "sage",
   visualTheme: "local-seo",
@@ -196,7 +196,7 @@ export const localSeoMastery: Course = {
     "Local SEO Consultant",
     "Agency SEO Team Member",
   ],
-  relatedCourseSlugs: ["global-seo-mastery", "guest-posting-link-building", "shopify-ecommerce"],
+  relatedCourseSlugs: ["global-seo-mastery", "digital-marketing", "shopify-ecommerce"],
   modules: [
     {
       id: "lsm-m1",

@@ -136,7 +136,11 @@ export function ContactForm() {
         {loading ? "Sending…" : "Send inquiry"}
       </Button>
       <p className="text-xs text-muted">
-        Or email{" "}
+        Or WhatsApp{" "}
+        <a className="font-semibold text-accent" href={siteConfig.whatsappUrl} target="_blank" rel="noreferrer">
+          {siteConfig.phoneDisplay}
+        </a>{" "}
+        or email{" "}
         <a className="font-semibold text-accent" href={`mailto:${siteConfig.email}`}>
           {siteConfig.email}
         </a>

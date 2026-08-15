@@ -1,5 +1,4 @@
 import Image from "next/image";
-import Link from "next/link";
 import { Button } from "@/components/ui/Button";
 import { Container } from "@/components/ui/Container";
 import { createPageMetadata } from "@/lib/metadata";
@@ -39,7 +38,7 @@ export default function AboutPage() {
             </h1>
             <p className="mt-5 max-w-2xl text-base leading-7 text-muted md:text-lg">
               DMrush Learn is the education brand of DMrush — focused on teaching the systems
-              behind search, AI workflows, websites, guest posting, and ecommerce through live
+              behind search, AI workflows, websites, ecommerce, and digital marketing through live
               physical classes.
             </p>
           </div>
@@ -94,16 +93,6 @@ export default function AboutPage() {
               </div>
             </div>
           </div>
-          <p className="mt-8 text-sm text-muted">
-            Demo dashboards:{" "}
-            <Link href="/student/dashboard" className="font-semibold text-accent hover:underline">
-              Student
-            </Link>{" "}
-            ·{" "}
-            <Link href="/teacher/dashboard" className="font-semibold text-accent hover:underline">
-              Teacher
-            </Link>
-          </p>
         </Container>
       </section>
     </>

@@ -1,4 +1,3 @@
-import Link from "next/link";
 import { Button } from "@/components/ui/Button";
 import { Container } from "@/components/ui/Container";
 import { PublicShell } from "@/components/public/PublicShell";
@@ -16,15 +15,7 @@ export default function NotFound() {
           <Button href="/" variant="signal">
             Home
           </Button>
-          <Button href="/courses" variant="secondary">
-            Courses
-          </Button>
         </div>
-        <p className="mt-6 text-sm text-muted">
-          <Link href="/login" className="hover:text-accent">
-            Student login demo
-          </Link>
-        </p>
       </Container>
     </PublicShell>
   );

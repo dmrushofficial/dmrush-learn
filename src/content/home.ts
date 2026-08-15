@@ -2,12 +2,12 @@ export const homeFaq = [
   {
     question: "Which courses are available?",
     answer:
-      "DMrush Learn currently offers six programs: Global SEO Mastery, Local SEO Mastery, AI Website Building, AI Tools & Prompt Engineering, Guest Posting & Link Building, and Shopify & E-commerce.",
+      "DMrush Learn currently offers eight programs: Global SEO Mastery, Local SEO Mastery, Shopify & E-Commerce, WordPress Website Development, AI Tools & Prompt Engineering, SaaS-Based AI Tools, Digital Marketing, and AI Website Building.",
   },
   {
     question: "Are classes online or physical?",
     answer:
-      "Classes are conducted live in person. The student dashboard is for notes, assignments, attendance, grades, and certificates — not recorded video lectures.",
+      "Classes are live in person on campus in Pattoki.",
   },
   {
     question: "Are courses beginner friendly?",
@@ -17,22 +17,22 @@ export const homeFaq = [
   {
     question: "How do assignments work?",
     answer:
-      "Courses include practical assignments. Students submit written answers, files, or links through the learning dashboard and receive instructor feedback.",
+      "Courses include practical assignments and classroom exercises with instructor feedback.",
   },
   {
     question: "Will students receive certificates?",
     answer:
-      "Yes. After attending required classes and completing assignments, a completion certificate becomes available in the student dashboard.",
+      "Yes. After attending required classes and completing the course work, a completion certificate is issued.",
   },
   {
     question: "Can students track progress?",
     answer:
-      "Yes. The student dashboard shows notes, upcoming assignments, grades, attendance, and announcements.",
+      "Instructors share class notes and track progress during the on-campus program.",
   },
   {
     question: "How can I enroll?",
     answer:
-      "Explore the course catalog, open a course page, and use the enrollment CTA or contact form. Full enrollment flow will be connected in a later phase.",
+      "Open a course page and tap Contact us, or message us on WhatsApp. We will guide you through admission.",
   },
 ];
 
@@ -74,9 +74,9 @@ export const learningExperience = [
 
 export const courseJourney = [
   { title: "Choose Course", body: "Pick the skill path that matches your goals." },
-  { title: "Enroll", body: "Join the cohort and access your dashboard." },
+  { title: "Enroll", body: "Contact us to join the next cohort." },
   { title: "Attend live classes", body: "Learn in physical sessions with instructors." },
-  { title: "Review notes & assignments", body: "Use the dashboard for notes and practical tasks." },
+  { title: "Review notes & assignments", body: "Use class notes and practical tasks between sessions." },
   { title: "Receive Feedback", body: "Improve with instructor review." },
   { title: "Earn Certificate", body: "Complete requirements and download your certificate." },
 ];

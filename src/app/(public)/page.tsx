@@ -5,20 +5,15 @@ import { Badge } from "@/components/ui/Badge";
 import { Button } from "@/components/ui/Button";
 import { Container } from "@/components/ui/Container";
 import { Faq } from "@/components/ui/Faq";
-import { ProgressBar } from "@/components/ui/ProgressBar";
 import {
   courseJourney,
   homeFaq,
   learningExperience,
   whyLearn,
 } from "@/content/home";
+import { InstructorCard } from "@/components/public/InstructorCard";
 import { instructors } from "@/content/instructors";
 import { courses, skillStrip } from "@/content/courses";
-import {
-  mockStudent,
-  studentAnnouncements,
-  studentAssignments,
-} from "@/content/student";
 import { createPageMetadata } from "@/lib/metadata";
 import { siteConfig } from "@/lib/site";
 
@@ -29,11 +24,6 @@ export const metadata = createPageMetadata({
 });
 
 export default function HomePage() {
-  const enrolled = courses.filter((c) => c.enrollmentState === "enrolled");
-  const upcoming = studentAssignments.filter(
-    (a) => a.status === "upcoming" || a.status === "submitted",
-  );
-
   return (
     <>
       <section className="border-b border-line bg-cream tx-paper">
@@ -48,12 +38,9 @@ export default function HomePage() {
               and ecommerce — through live physical classes, with online notes, assignments,
               and progress tracking.
             </p>
-            <div className="mt-8 flex flex-col gap-3 sm:flex-row">
+            <div className="mt-8">
               <Button href="/courses" variant="signal" size="lg">
                 Explore Courses →
-              </Button>
-              <Button href="/login" variant="secondary" size="lg">
-                Student Login
               </Button>
             </div>
             <div className="mt-8 flex flex-wrap gap-2">
@@ -95,7 +82,7 @@ export default function HomePage() {
           <div className="flex flex-col gap-4 md:flex-row md:items-end md:justify-between">
             <div className="max-w-2xl">
               <p className="t-label text-accent">Featured courses</p>
-              <h2 className="t-h2 mt-4 text-ink">Six practical programs. One institute.</h2>
+              <h2 className="t-h2 mt-4 text-ink">Eight practical programs. One institute.</h2>
             </div>
             <Button href="/courses" variant="secondary">
               View all courses
@@ -153,105 +140,18 @@ export default function HomePage() {
         </Container>
       </section>
 
-      <section className="bg-surface py-16 md:py-24">
-        <Container>
-          <div className="flex flex-col gap-4 md:flex-row md:items-end md:justify-between">
-            <div className="max-w-2xl">
-              <p className="t-label text-accent">Student dashboard preview</p>
-              <h2 className="t-h2 mt-4 text-ink">A clear view of learning progress.</h2>
-              <p className="mt-4 text-muted">
-                Mock preview for {mockStudent.name}. Full interactive screens live under Student
-                routes.
-              </p>
-            </div>
-            <Button href="/student/dashboard" variant="secondary">
-              Open student demo
-            </Button>
-          </div>
-          <div className="mt-10 grid gap-4 lg:grid-cols-3">
-            <div className="space-y-4 rounded-2xl border border-line bg-cream p-5 lg:col-span-2">
-              <h3 className="font-bold text-ink">Continue learning</h3>
-              {enrolled.map((course) => (
-                <div
-                  key={course.id}
-                  className="flex gap-4 rounded-xl border border-line bg-surface p-3"
-                >
-                  <div className="relative h-20 w-28 shrink-0 overflow-hidden rounded-lg bg-panel">
-                    <Image
-                      src={course.thumbnail}
-                      alt=""
-                      fill
-                      className="object-cover"
-                      sizes="112px"
-                    />
-                  </div>
-                  <div className="min-w-0 flex-1 py-1">
-                    <div className="flex items-start justify-between gap-3">
-                      <div>
-                        <p className="font-semibold text-ink">{course.title}</p>
-                        <p className="mt-1 text-sm text-muted">
-                          Live classes · notes & assignments
-                        </p>
-                      </div>
-                      <Badge>{course.progress}%</Badge>
-                    </div>
-                    <ProgressBar value={course.progress} className="mt-3" />
-                  </div>
-                </div>
-              ))}
-            </div>
-            <div className="space-y-4">
-              <div className="rounded-2xl border border-line bg-cream p-5">
-                <h3 className="font-bold text-ink">Upcoming assignments</h3>
-                <ul className="mt-4 space-y-3">
-                  {upcoming.slice(0, 3).map((item) => (
-                    <li key={item.id} className="text-sm">
-                      <p className="font-semibold text-ink">{item.title}</p>
-                      <p className="mt-1 text-muted">
-                        {item.courseTitle} · Due {item.dueDate}
-                      </p>
-                    </li>
-                  ))}
-                </ul>
-              </div>
-              <div className="rounded-2xl border border-line bg-cream p-5">
-                <h3 className="font-bold text-ink">Announcements</h3>
-                <ul className="mt-4 space-y-3">
-                  {studentAnnouncements.slice(0, 2).map((item) => (
-                    <li key={item.id} className="text-sm">
-                      <p className="font-semibold text-ink">{item.title}</p>
-                      <p className="mt-1 text-muted">{item.date}</p>
-                    </li>
-                  ))}
-                </ul>
-              </div>
-            </div>
-          </div>
-        </Container>
-      </section>
-
       <section className="bg-cream py-16 md:py-24">
         <Container>
           <div className="max-w-2xl">
             <p className="t-label text-accent">Instructors</p>
-            <h2 className="t-h2 mt-4 text-ink">Instructor profiles coming soon.</h2>
+            <h2 className="t-h2 mt-4 text-ink">Meet the instructors.</h2>
             <p className="mt-4 text-muted">
-              Placeholder cards are ready. Real names and photos will be added when provided.
+              Najaf Khan, Usman Raza, and Tayyab Hanif lead the eight on-campus programs.
             </p>
           </div>
           <ul className="mt-10 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
             {instructors.map((person) => (
-              <li key={person.id} className="rounded-2xl border border-line bg-surface p-6">
-                <div className="flex h-16 w-16 items-center justify-center rounded-full bg-panel text-sm font-bold text-accent">
-                  TBA
-                </div>
-                <h3 className="mt-4 text-lg font-bold text-ink">{person.name}</h3>
-                <p className="mt-1 text-sm font-semibold text-accent">{person.role}</p>
-                <p className="mt-3 text-sm text-muted">{person.courseTaught}</p>
-                <p className="mt-1 text-xs uppercase tracking-[0.08em] text-muted">
-                  {person.expertise}
-                </p>
-              </li>
+              <InstructorCard key={person.id} person={person} />
             ))}
           </ul>
         </Container>
@@ -296,17 +196,9 @@ export default function HomePage() {
           <p className="mx-auto mt-5 max-w-2xl text-base leading-7 text-on-accent/75">
             Explore the course catalog or contact DMrush Learn for admission questions.
           </p>
-          <div className="mt-8 flex flex-col items-center justify-center gap-3 sm:flex-row">
-            <Button href="/courses" variant="signal" size="lg">
-              Explore Courses →
-            </Button>
-            <Button
-              href="/contact"
-              variant="secondary"
-              size="lg"
-              className="border-white/30 text-on-accent hover:bg-white/10"
-            >
-              Contact DMrush Learn
+          <div className="mt-8">
+            <Button href="/contact" variant="signal" size="lg">
+              Contact us →
             </Button>
           </div>
           <p className="mt-6 text-sm text-on-accent/55">

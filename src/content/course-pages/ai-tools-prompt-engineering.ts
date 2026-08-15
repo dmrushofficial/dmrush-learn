@@ -15,8 +15,8 @@ export const aiToolsPromptEngineering: Course = {
   level: "Beginner",
   duration: "2 Months",
   classesPerWeek: 3,
-  days: "Tuesday / Thursday / Sunday",
-  classTime: "12:00 PM – 1:30 PM",
+  days: "Tue/Thu/Sun",
+  classTime: "12:00–1:30",
   classroom: "Room 2",
   trainingMode: "On-Campus",
   location: "DMRUSH, Pattoki",
@@ -24,8 +24,8 @@ export const aiToolsPromptEngineering: Course = {
   metaTitle: "AI Tools & Prompt Engineering Course | DMRUSH Learn",
   metaDescription:
     "2-month AI Tools & Prompt Engineering at DMRUSH Learn. ChatGPT, Claude, Gemini, prompting systems, workflows, and an AI portfolio. Tue/Thu/Sun, 12:00–1:30 PM.",
-  instructor: "Instructor to be announced",
-  instructorImage: null,
+  instructor: "Tayyab Hanif",
+  instructorImage: "/images/instructors/tayyab-hanif.png",
   thumbnail: "/images/courses/visuals/ai-tools-hero.jpg",
   thumbnailTone: "lime",
   visualTheme: "ai-tools",
@@ -176,7 +176,7 @@ export const aiToolsPromptEngineering: Course = {
       ],
     },
   ],
-  relatedCourseSlugs: ["ai-website-building","guest-posting-link-building","shopify-ecommerce"],
+  relatedCourseSlugs: ["ai-website-building","saas-ai-tools","shopify-ecommerce"],
   faq: [
     {
       question: "Is this only about ChatGPT?",

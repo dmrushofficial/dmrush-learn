@@ -103,6 +103,7 @@ export default async function StudentDashboardPage() {
                     </div>
                     <div className="min-w-0 flex-1 py-1">
                       <p className="font-semibold text-ink break-words">{course.title}</p>
+                      <p className="mt-0.5 text-xs text-muted">{course.instructor}</p>
                       <p className="mt-1 text-sm text-muted">
                         {progress.completed}/{progress.total} lessons · {progress.percent}%
                       </p>

@@ -25,16 +25,21 @@ export function SiteHeader() {
         </div>
         <div className="hidden items-center gap-3 md:flex">
           <a
+            href={siteConfig.whatsappUrl}
+            target="_blank"
+            rel="noreferrer"
+            className="text-sm font-semibold text-ink/75 hover:text-ink"
+          >
+            WhatsApp
+          </a>
+          <a
             href={siteConfig.agencyUrl}
             className="mr-1 text-xs font-semibold text-muted hover:text-accent"
           >
             {siteConfig.agencyLabel}
           </a>
-          <Button href="/login" variant="secondary" size="sm">
-            Student Login
-          </Button>
-          <Button href="/courses" variant="signal" size="sm">
-            Explore Courses
+          <Button href="/contact" variant="signal" size="sm">
+            Contact us
           </Button>
         </div>
         <MobileNav />
