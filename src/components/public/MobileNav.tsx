@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import Link from "next/link";
 import { Button } from "@/components/ui/Button";
 import { publicNav, siteConfig } from "@/lib/site";
@@ -8,49 +8,57 @@ import { publicNav, siteConfig } from "@/lib/site";
 export function MobileNav() {
   const [open, setOpen] = useState(false);
 
+  useEffect(() => {
+    if (!open) return;
+
+    function onKeyDown(event: KeyboardEvent) {
+      if (event.key === "Escape") setOpen(false);
+    }
+
+    document.body.style.overflow = "hidden";
+    window.addEventListener("keydown", onKeyDown);
+    return () => {
+      document.body.style.overflow = "";
+      window.removeEventListener("keydown", onKeyDown);
+    };
+  }, [open]);
+
   return (
-    <div className="md:hidden">
+    <div>
       <button
         type="button"
-        className="inline-flex h-10 w-10 items-center justify-center rounded-lg border border-line text-ink"
+        className="text-base font-medium text-ink"
         aria-expanded={open}
         aria-controls="mobile-nav"
         aria-label={open ? "Close menu" : "Open menu"}
-        onClick={() => setOpen((v) => !v)}
+        onClick={() => setOpen((current) => !current)}
       >
-        <span aria-hidden className="text-lg font-bold">
-          {open ? "×" : "☰"}
-        </span>
+        {open ? "Close" : "Menu"}
       </button>
       {open ? (
         <div
           id="mobile-nav"
-          className="absolute inset-x-0 top-16 border-b border-line bg-cream px-5 py-5 shadow-sm"
+          className="absolute inset-x-0 top-full z-30 border-b border-line bg-cream shadow-lg"
         >
-          <nav className="flex flex-col gap-3" aria-label="Mobile">
+          <nav aria-label="Mobile" className="flex flex-col px-5 py-6">
             {publicNav.map((item) => (
               <Link
                 key={item.href}
                 href={item.href}
-                className="text-base font-semibold text-ink"
+                className="py-2.5 text-lg text-ink"
                 onClick={() => setOpen(false)}
               >
                 {item.label}
               </Link>
             ))}
-            <a href={siteConfig.agencyUrl} className="text-sm font-semibold text-muted">
+            <a
+              href={siteConfig.agencyUrl}
+              className="py-2.5 text-lg text-ink"
+              onClick={() => setOpen(false)}
+            >
               {siteConfig.agencyLabel}
             </a>
-            <div className="mt-2 flex flex-col gap-2">
-              <a
-                href={siteConfig.whatsappUrl}
-                target="_blank"
-                rel="noreferrer"
-                className="text-base font-semibold text-ink"
-                onClick={() => setOpen(false)}
-              >
-                WhatsApp {siteConfig.phoneDisplay}
-              </a>
+            <div className="mt-5">
               <Button href="/contact" variant="signal">
                 Contact us
               </Button>

@@ -3,13 +3,14 @@ import { Container } from "@/components/ui/Container";
 import { Logo } from "@/components/ui/Logo";
 import { courses } from "@/content/courses";
 import { publicNav, siteConfig } from "@/lib/site";
+import { SocialIcon } from "@/components/ui/SocialIcons";
 
 export function SiteFooter() {
   return (
     <footer className="border-t border-line bg-accent text-on-accent">
       <Container className="grid gap-10 py-14 sm:grid-cols-2 lg:grid-cols-4">
         <div>
-          <Logo showLearn onDark imageClassName="h-8 w-auto" />
+          <Logo onDark imageClassName="h-8 w-auto" />
           <p className="mt-4 max-w-sm text-sm leading-7 text-on-accent/75">
             {siteConfig.description}
           </p>
@@ -19,6 +20,20 @@ export function SiteFooter() {
           >
             Visit {siteConfig.agencyLabel} →
           </a>
+          <div className="mt-5 flex flex-wrap gap-2.5">
+            {siteConfig.social.map((item) => (
+              <a
+                key={item.href}
+                href={item.href}
+                target="_blank"
+                rel="noreferrer"
+                aria-label={item.label}
+                className="flex h-10 w-10 items-center justify-center rounded-full border border-white/20 text-on-accent/85 transition-colors hover:border-signal hover:text-signal"
+              >
+                <SocialIcon name={item.id} className="h-[18px] w-[18px]" />
+              </a>
+            ))}
+          </div>
         </div>
         <div>
           <p className="text-xs font-bold uppercase tracking-[0.14em] text-on-accent/55">

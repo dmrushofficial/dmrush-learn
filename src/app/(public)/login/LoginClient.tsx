@@ -57,7 +57,7 @@ export default function LoginClient() {
       <Container className="mx-auto max-w-md">
         <div className="rounded-2xl border border-line bg-surface p-6 shadow-sm md:p-8">
           <div className="flex justify-center">
-            <Logo showLearn imageClassName="h-9 w-auto" />
+            <Logo imageClassName="h-9 w-auto" />
           </div>
           <p className="t-label mt-6 text-center text-accent">Student portal</p>
           <h1 className="mt-3 text-3xl font-bold tracking-[-0.03em] text-ink">Student Login</h1>

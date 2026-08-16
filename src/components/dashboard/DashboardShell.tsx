@@ -47,7 +47,7 @@ export function DashboardShell({
           )}
         >
           <div className="flex h-16 items-center justify-between border-b border-line px-5">
-            <Logo showLearn imageClassName="h-7 w-auto" />
+            <Logo imageClassName="h-7 w-auto" />
             <button
               type="button"
               className="rounded-md border border-line px-2 py-1 text-sm lg:hidden"
