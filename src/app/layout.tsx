@@ -16,10 +16,6 @@ export const metadata: Metadata = {
     template: `%s | ${siteConfig.name}`,
   },
   description: siteConfig.description,
-  icons: {
-    icon: "/images/brand/dmrush-logo.png",
-    apple: "/images/brand/dmrush-logo.png",
-  },
   openGraph: {
     siteName: siteConfig.name,
     locale: siteConfig.locale,

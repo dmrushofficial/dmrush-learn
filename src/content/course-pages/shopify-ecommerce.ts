@@ -24,8 +24,8 @@ export const shopifyEcommerce: Course = {
   metaTitle: "Shopify & E-Commerce Course | DMRUSH Learn Pattoki",
   metaDescription:
     "2-month Shopify & E-Commerce training at DMRUSH Learn. Store setup, products, themes, conversion, SEO, analytics, and a complete Shopify store project. Mon/Wed/Sat, 3:00–4:30 PM.",
-  instructor: "Usman Raza",
-  instructorImage: "/images/instructors/usman-raza.png",
+  instructor: "Najaf Khan",
+  instructorImage: "/images/instructors/najaf-khan.png",
   thumbnail: "/images/courses/visuals/shopify-hero.jpg",
   thumbnailTone: "slate",
   visualTheme: "shopify",

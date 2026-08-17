@@ -30,22 +30,15 @@ const NAMED_INSTRUCTORS = [
     id: "PT-NAJAF",
     email: "najaf.khan@dmrush.com",
     name: "Najaf Khan",
-    roleTitle: "SEO & Digital Marketing Instructor",
-    assignedCourseIds: ["course-global-seo", "course-local-seo", "course-digital-marketing"],
+    roleTitle: "SEO, Marketing & Web Instructor",
+    assignedCourseIds: ["course-global-seo", "course-shopify", "course-wordpress", "course-digital-marketing"],
   },
   {
     id: "PT-USMAN",
     email: "usman.raza@dmrush.com",
     name: "Usman Raza",
-    roleTitle: "Web & Ecommerce Instructor",
-    assignedCourseIds: ["course-shopify", "course-wordpress", "course-ai-website"],
-  },
-  {
-    id: "PT-TAYYAB",
-    email: "tayyab.hanif@dmrush.com",
-    name: "Tayyab Hanif",
-    roleTitle: "AI Tools Instructor",
-    assignedCourseIds: ["course-ai-tools", "course-saas-ai"],
+    roleTitle: "AI & Local SEO Instructor",
+    assignedCourseIds: ["course-local-seo", "course-ai-tools", "course-saas-ai", "course-ai-website"],
   },
 ] as const;
 

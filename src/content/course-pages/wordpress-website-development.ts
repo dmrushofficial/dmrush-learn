@@ -24,8 +24,8 @@ export const wordpressWebsiteDevelopment: Course = {
   metaTitle: "WordPress Website Development Course | DMRUSH Learn",
   metaDescription:
     "3-month WordPress Website Development at DMRUSH Learn. Themes, pages, plugins, SEO foundations, and a complete website project. Mon/Wed/Sat, 4:30–6:00.",
-  instructor: "Usman Raza",
-  instructorImage: "/images/instructors/usman-raza.png",
+  instructor: "Najaf Khan",
+  instructorImage: "/images/instructors/najaf-khan.png",
   thumbnail: "/images/courses/visuals/wordpress-hero.jpg",
   thumbnailTone: "sage",
   visualTheme: "wordpress",

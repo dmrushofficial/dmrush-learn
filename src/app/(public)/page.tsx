@@ -146,7 +146,7 @@ export default function HomePage() {
             <p className="t-label text-accent">Instructors</p>
             <h2 className="t-h2 mt-4 text-ink">Meet the instructors.</h2>
             <p className="mt-4 text-muted">
-              Najaf Khan, Usman Raza, and Tayyab Hanif lead the eight on-campus programs.
+              Najaf Khan and Usman Raza lead the eight on-campus programs.
             </p>
           </div>
           <ul className="mt-10 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">

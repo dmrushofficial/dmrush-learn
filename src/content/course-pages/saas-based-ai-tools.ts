@@ -24,8 +24,8 @@ export const saasBasedAiTools: Course = {
   metaTitle: "SaaS-Based AI Tools Course | DMRUSH Learn",
   metaDescription:
     "1-month SaaS-Based AI Tools at DMRUSH Learn. Research, content, automation, and workflow practice. Tue/Thu/Sun, 1:30–3:00.",
-  instructor: "Tayyab Hanif",
-  instructorImage: "/images/instructors/tayyab-hanif.png",
+  instructor: "Usman Raza",
+  instructorImage: "/images/instructors/usman-raza.png",
   thumbnail: "/images/courses/visuals/saas-ai-hero.jpg",
   thumbnailTone: "olive",
   visualTheme: "saas-ai",

@@ -24,8 +24,8 @@ export const localSeoMastery: Course = {
   metaTitle: "Local SEO Mastery Course | DMRUSH Learn Pattoki",
   metaDescription:
     "3-month Local SEO Mastery at DMRUSH Learn. GBP, Map Pack, citations, reviews, local pages, and a local business project. Mon/Wed/Sat, 1:30–3:00 PM.",
-  instructor: "Najaf Khan",
-  instructorImage: "/images/instructors/najaf-khan.png",
+  instructor: "Usman Raza",
+  instructorImage: "/images/instructors/usman-raza.png",
   thumbnail: "/images/courses/visuals/local-seo-hero.jpg",
   thumbnailTone: "sage",
   visualTheme: "local-seo",

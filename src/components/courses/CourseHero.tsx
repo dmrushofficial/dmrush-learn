@@ -51,20 +51,9 @@ export function CourseHero({ course }: { course: Course }) {
               </div>
             ) : null}
             <div className="mt-6 flex flex-wrap gap-2">
-              {[
-                course.duration,
-                `${course.classesPerWeek} classes/week`,
-                course.days,
-                course.classTime,
-                "On-Campus",
-              ].map((chip) => (
-                <span
-                  key={chip}
-                  className="rounded-full border border-line bg-surface px-3 py-1.5 text-xs font-semibold text-ink"
-                >
-                  {chip}
-                </span>
-              ))}
+              <span className="rounded-full border border-line bg-surface px-3 py-1.5 text-xs font-semibold text-ink">
+                On-Campus
+              </span>
             </div>
             <div className="mt-7 flex flex-col gap-3 sm:flex-row">
               <Button href={applyHref} variant="signal" size="lg">

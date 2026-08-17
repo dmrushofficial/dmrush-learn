@@ -7,7 +7,7 @@ import { createPageMetadata } from "@/lib/metadata";
 export const metadata = createPageMetadata({
   title: "Instructors",
   description:
-    "Meet DMrush Learn instructors Najaf Khan, Usman Raza, and Tayyab Hanif.",
+    "Meet DMrush Learn instructors Najaf Khan and Usman Raza.",
   path: "/instructors",
 });
 
@@ -19,14 +19,14 @@ export default function InstructorsPage() {
           <p className="t-label text-accent">Instructors</p>
           <h1 className="t-h2 mt-4 max-w-3xl text-ink">Practitioner-led courses.</h1>
           <p className="mt-5 max-w-2xl text-base leading-7 text-muted md:text-lg">
-            Najaf Khan, Usman Raza, and Tayyab Hanif teach the eight DMrush Learn programs
-            on campus in Pattoki.
+            Najaf Khan and Usman Raza teach the eight DMrush Learn programs on campus in
+            Pattoki.
           </p>
         </Container>
       </section>
       <section className="bg-surface py-14 md:py-20">
         <Container>
-          <ul className="grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
+          <ul className="grid gap-5 sm:grid-cols-2">
             {instructors.map((person) => (
               <InstructorCard key={person.id} person={person} className="bg-cream" />
             ))}

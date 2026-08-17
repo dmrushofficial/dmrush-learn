@@ -21,8 +21,7 @@ export default function CoursesPage() {
           </h1>
           <p className="mt-5 max-w-2xl text-base leading-7 text-muted md:text-lg">
             Eight current courses at DMRUSH. Live physical classes with detailed curricula, projects,
-            and portfolio-focused training — each with a clear duration, weekly schedule, and class
-            time.
+            and portfolio-focused training.
           </p>
         </Container>
       </section>

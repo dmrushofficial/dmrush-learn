@@ -3,7 +3,6 @@ import Link from "next/link";
 import { Badge } from "@/components/ui/Badge";
 import { Button } from "@/components/ui/Button";
 import type { Course } from "@/content/courses";
-import { formatCourseSchedule } from "@/content/courses";
 import { cn } from "@/lib/cn";
 
 export function CourseCard({
@@ -41,25 +40,6 @@ export function CourseCard({
         </h3>
         <p className="mt-2 flex-1 text-sm leading-6 text-muted">{course.shortDescription}</p>
         <p className="mt-3 text-xs font-semibold text-ink">Instructor: {course.instructor}</p>
-        <dl className="mt-4 grid grid-cols-2 gap-3 text-xs text-muted">
-          <div>
-            <dt className="font-semibold text-ink">Duration</dt>
-            <dd className="mt-1">{course.duration}</dd>
-          </div>
-          <div>
-            <dt className="font-semibold text-ink">Classes / week</dt>
-            <dd className="mt-1">{course.classesPerWeek}</dd>
-          </div>
-          <div>
-            <dt className="font-semibold text-ink">Days</dt>
-            <dd className="mt-1">{course.days}</dd>
-          </div>
-          <div>
-            <dt className="font-semibold text-ink">Time</dt>
-            <dd className="mt-1">{course.classTime}</dd>
-          </div>
-        </dl>
-        <p className="mt-3 text-[11px] font-medium text-accent">{formatCourseSchedule(course)}</p>
         <div className="mt-5">
           <Button href={`/courses/${course.slug}`} variant="secondary" size="sm">
             View course →

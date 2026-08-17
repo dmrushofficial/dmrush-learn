@@ -24,8 +24,8 @@ export const aiToolsPromptEngineering: Course = {
   metaTitle: "AI Tools & Prompt Engineering Course | DMRUSH Learn",
   metaDescription:
     "2-month AI Tools & Prompt Engineering at DMRUSH Learn. ChatGPT, Claude, Gemini, prompting systems, workflows, and an AI portfolio. Tue/Thu/Sun, 12:00–1:30 PM.",
-  instructor: "Tayyab Hanif",
-  instructorImage: "/images/instructors/tayyab-hanif.png",
+  instructor: "Usman Raza",
+  instructorImage: "/images/instructors/usman-raza.png",
   thumbnail: "/images/courses/visuals/ai-tools-hero.jpg",
   thumbnailTone: "lime",
   visualTheme: "ai-tools",
