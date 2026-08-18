@@ -5,7 +5,7 @@ export const siteConfig = {
   url: process.env.NEXT_PUBLIC_SITE_URL ?? "https://learn.dmrush.com",
   agencyUrl: "https://dmrush.com",
   agencyLabel: "DMrush Agency",
-  email: "learn@dmrush.com",
+  email: "dmrushofficial@gmail.com",
   phone: "+923017786667",
   phoneDisplay: "+92 301 7786667",
   whatsappUrl: "https://wa.me/923017786667",
